@@ -28,5 +28,5 @@ int main(void) {
     i = INIT;
     printStr
   (*(str+(i++))=val);
-  PRINT (*(str+i)?printf("%c",i++[str]):0);
+  PRINT (*(str+i)?putchar(i++[str]):0);
 }
