@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define LITERAL "A man a plan a canal panama."
+#define LITERAL "A man a plan a canal panama.\n"
 
 int main(void) {
   int max = 0;
@@ -9,5 +9,5 @@ int main(void) {
   int i = 0;
   rev: if (max-i+1) *(str+i) = *(LITERAL+max-i++); else goto end;
   goto rev;
-  end: printf("%s\n", str);
+  end: printf("%s", str);
 }
