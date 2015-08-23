@@ -6,9 +6,9 @@ int main(void) {
   int first, second, max;
   printf("Enter two positive ints: ");
   scanf("%d %d", &first, &second);
-  max = (first>second ? first : second);
+  max = (first > second ? first : second);
 
-  start:
-    if (max % first || max % second) loop
-  output
+  start: if (max % first || max % second) max++; else goto end;
+  goto start;
+  end: output
 }
