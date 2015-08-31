@@ -19,7 +19,10 @@ mystery: createBuildDir
 badCalc: createBuildDir
 	$(CC) $(DEFAULTCFLAGS) -o $(BUILDDIR)/badCalc $(SOURCEDIR)/badCalc.c
 
-all: createBuildDir rev LCM mystery badCalc
+caesar: createBuildDir
+	$(CC) $(DEFAULTCFLAGS) -o $(BUILDDIR)/caesar $(SOURCEDIR)/caesar.c
+
+all: createBuildDir rev LCM mystery badCalc caesar.c
 
 clean: 
 	$(RM) $(BUILDDIR)/*
