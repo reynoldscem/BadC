@@ -22,7 +22,7 @@ badCalc: createBuildDir
 caesar: createBuildDir
 	$(CC) $(DEFAULTCFLAGS) -o $(BUILDDIR)/caesar $(SOURCEDIR)/caesar.c
 
-all: createBuildDir rev LCM mystery badCalc caesar.c
+all: createBuildDir rev LCM mystery badCalc caesar
 
 clean: 
 	$(RM) $(BUILDDIR)/*
