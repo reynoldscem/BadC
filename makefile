@@ -22,6 +22,9 @@ badCalc: createBuildDir
 caesar: createBuildDir
 	$(CC) $(DEFAULTCFLAGS) -o $(BUILDDIR)/caesar $(SOURCEDIR)/caesar.c
 
+vigenere: createBuildDir
+	$(CC) $(DEFAULTCFLAGS) -o $(BUILDDIR)/vigenere $(SOURCEDIR)/vigenere.c
+
 all: createBuildDir rev LCM mystery badCalc caesar
 
 clean: 
