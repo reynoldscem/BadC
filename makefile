@@ -25,9 +25,12 @@ caesar: createBuildDir
 vigenere: createBuildDir
 	$(CC) $(DEFAULTCFLAGS) -o $(BUILDDIR)/vigenere $(SOURCEDIR)/vigenere.c
 
-all: createBuildDir rev LCM mystery badCalc caesar
+sleepMacro: createBuildDir
+	$(CC) -o $(BUILDDIR)/sleepMacro $(SOURCEDIR)/sleepMacro.c
 
-clean: 
+all: createBuildDir rev LCM mystery badCalc caesar vigenere sleepMacro
+
+clean:
 	$(RM) $(BUILDDIR)/*
 
 default: all
