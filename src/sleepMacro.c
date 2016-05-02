@@ -25,38 +25,43 @@ void sleep(int seconds) {
 
 int main(void) {
   #ifndef PRODUCTION
-    // Run without PRODUCTION defined to test the value
-    // for TIMEWAIT tuned to your system.
-    // This may afterwards be tuned by hand or with
-    // machine learning algorithms
+    /* Run without PRODUCTION defined to test the value
+       for TIMEWAIT tuned to your system.
+       This may afterwards be tuned by hand or with
+       machine learning algorithms
+    */
     INITIALISE
     int i;
     TIMING(i)
     printf("Need %d loops per second ;)\n", i);
   #endif
   #ifdef PRODUCTION
-    // Production tutorial
+    /* Production tutorial
 
-    // You must call initialise before using SLEEP(n) directly
-    // Works for floating point values
+      You must call initialise before using SLEEP(n) directly
+      Works for floating point values
+    */
     INITIALISE
     SLEEP(0.25)
     SLEEP(0.25)
     SLEEP(0.25)
     SLEEP(0.25)
 
-    // Calling INITALISE again within a given scope
-    // will fail to compile, so use safety braces if you need that
-    // functionality
+    /* Calling INITALISE again within a given scope
+       will fail to compile, so use safety braces if you need that
+       functionality
+    */
     {
       INITIALISE
       SLEEP(1)
       SLEEP(0)
     }
 
-    // If you can handle the overhead of a function call
-    // you can use the high level version.
-    // Only works for whole seconds
+    /* If you can handle the overhead of a function call
+       you can use the high level version.
+       Only works for whole seconds
+    */
     sleep(7);
   #endif
+  return 0;
 }
